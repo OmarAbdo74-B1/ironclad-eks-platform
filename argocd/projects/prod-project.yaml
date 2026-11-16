@@ -1,0 +1,41 @@
+apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
+  name: prod-project
+  namespace: argocd
+  annotations:
+    argocd.argoproj.io/sync-wave: "-1"
+spec:
+  description: Production environment boundary
+  sourceRepos:
+    - https://github.com/OmarAbdo74-B1/ironclad-eks-platform.git
+  destinations:
+    - namespace: prod
+      server: https://kubernetes.default.svc
+  clusterResourceWhitelist:
+    - group: ""
+      kind: Namespace
+  namespaceResourceWhitelist:
+    - group: apps
+      kind: Deployment
+    - group: ""
+      kind: Service
+    - group: networking.k8s.io
+      kind: Ingress
+  roles:
+    - name: developers
+      description: Read-only access to prod
+      policies:
+        - p, proj:prod-project:developers, applications, get, prod-project/*, allow
+    - name: release-managers
+      description: Can sync prod
+      policies:
+        - p, proj:prod-project:release-managers, applications, get, prod-project/*, allow
+        - p, proj:prod-project:release-managers, applications, sync, prod-project/*, allow
+  syncWindows:
+    - kind: allow
+      schedule: "0 10 * * 0-4"
+      duration: 6h
+      timeZone: "Africa/Cairo"
+      applications:
+        - "*"

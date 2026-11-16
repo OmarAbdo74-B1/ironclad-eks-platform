@@ -1,0 +1,18 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: cars-prod
+  namespace: argocd
+  annotations:
+    argocd.argoproj.io/sync-wave: "0"
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  project: prod-project
+  source:
+    repoURL: https://github.com/OmarAbdo74-B1/ironclad-eks-platform.git
+    targetRevision: main
+    path: app/overlays/prod
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: prod
