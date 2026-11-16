@@ -4,36 +4,37 @@ kind: Kustomization
 namespace: dev
 
 resources:
-  - ../../base
+- ../../base
 
 labels:
-  - pairs:
-      env: dev
+- pairs:
+    env: dev
 
 replicas:
-  - name: backend
-    count: 1
-  - name: frontend
-    count: 1
+- count: 1
+  name: backend
+- count: 1
+  name: frontend
 
 images:
-  - name: omarabdo4/butcher-cars-backend
-    newTag: v1.0.5
-  - name: omarabdo4/butcher-cars-frontend
-    newTag: v1.0.5
+- name: omarabdo4/butcher-cars-backend
+  newName: omarabdo4/butcher-cars-backend
+  newTag: v1.1.2
+- name: omarabdo4/butcher-cars-frontend
+  newTag: v1.0.5
 
 patches:
-  - target:
-      kind: Deployment
-      name: backend
-    patch: |-
-      - op: replace
-        path: /spec/template/spec/containers/0/env/2/value
-        value: dev
-  - target:
-      kind: Ingress
-      name: web-app-ingress
-    patch: |-
-      - op: replace
-        path: /spec/rules/0/host
-        value: dev.app.example.com
+- patch: |-
+    - op: replace
+      path: /spec/template/spec/containers/0/env/2/value
+      value: dev
+  target:
+    kind: Deployment
+    name: backend
+- patch: |-
+    - op: replace
+      path: /spec/rules/0/host
+      value: dev.app.example.com
+  target:
+    kind: Ingress
+    name: web-app-ingress
