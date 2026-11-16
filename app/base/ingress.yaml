@@ -14,7 +14,7 @@ spec:
               service:
                 name: backend-svc
                 port:
-                  number: 3000
+                  number: 80
           - path: /
             pathType: Prefix
             backend:

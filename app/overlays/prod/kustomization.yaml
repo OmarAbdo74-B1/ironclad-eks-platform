@@ -24,6 +24,13 @@ images:
 
 patches:
   - target:
+      kind: Deployment
+      name: backend
+    patch: |-
+      - op: replace
+        path: /spec/template/spec/containers/0/env/2/value
+        value: prod
+  - target:
       kind: Ingress
       name: web-app-ingress
     patch: |-
