@@ -10,7 +10,7 @@ spec:
   source:
     repoURL: https://github.com/OmarAbdo74-B1/ironclad-eks-platform.git
     targetRevision: main
-    path: ArgoCD
+    path: argocd
     directory:
       recurse: true
       exclude: root-app.yaml
