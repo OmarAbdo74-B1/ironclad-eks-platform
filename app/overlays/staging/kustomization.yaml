@@ -18,9 +18,9 @@ replicas:
 
 images:
   - name: omarabdo4/butcher-cars-backend
-    newTag: v1.0.5
+    newTag: v1.1.3
   - name: omarabdo4/butcher-cars-frontend
-    newTag: v1.0.5
+    newTag: v1.1.4
 
 patches:
   - target:
