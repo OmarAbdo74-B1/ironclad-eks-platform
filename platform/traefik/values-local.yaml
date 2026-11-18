@@ -1,0 +1,20 @@
+ingressClass:
+  isDefaultClass: false
+
+service:
+  spec:
+    type: NodePort
+
+ports:
+  web:
+    nodePort: 30080
+  websecure:
+    nodePort: 30443
+
+providers:
+  kubernetesIngress:
+    publishedService:
+      enabled: false
+
+additionalArguments:
+  - --providers.kubernetesingress.ingressendpoint.ip=192.168.56.103
