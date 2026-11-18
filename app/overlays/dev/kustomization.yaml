@@ -35,7 +35,7 @@ patches:
 - patch: |-
     - op: replace
       path: /spec/rules/0/host
-      value: dev.app.example.com
+      value: dev.192.168.56.103.nip.io
   target:
     kind: Ingress
     name: web-app-ingress

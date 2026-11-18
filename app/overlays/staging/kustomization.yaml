@@ -36,4 +36,4 @@ patches:
     patch: |-
       - op: replace
         path: /spec/rules/0/host
-        value: staging.app.example.com
+        value: staging.192.168.56.103.nip.io
