@@ -8,6 +8,8 @@ kubeProxy:
   enabled: false
 
 prometheusOperator:
+  tls:
+    enabled: false
   admissionWebhooks:
     enabled: false
   nodeSelector:
