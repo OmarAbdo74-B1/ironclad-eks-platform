@@ -1,0 +1,68 @@
+initContainers:
+  - name: velero-plugin-for-aws
+    image: velero/velero-plugin-for-aws:v1.14.4
+    imagePullPolicy: IfNotPresent
+    volumeMounts:
+      - mountPath: /target
+        name: plugins
+
+configuration:
+  backupStorageLocation:
+    - name: default
+      provider: aws
+      bucket: velero
+      default: true
+      config:
+        region: us-east-1
+        s3ForcePathStyle: "true"
+        s3Url: http://192.168.56.103:8333
+  volumeSnapshotLocation: []
+
+credentials:
+  useSecret: true
+  existingSecret: velero-credentials
+
+snapshotsEnabled: false
+deployNodeAgent: false
+upgradeCRDs: false
+
+nodeSelector:
+  kubernetes.io/hostname: manged-node1
+
+resources:
+  requests:
+    cpu: 50m
+    memory: 128Mi
+  limits:
+    memory: 256Mi
+
+metrics:
+  enabled: true
+  serviceMonitor:
+    enabled: true
+
+schedules:
+  dev-daily:
+    disabled: false
+    schedule: "0 2 * * *"
+    useOwnerReferencesInBackup: false
+    template:
+      ttl: 168h
+      includedNamespaces:
+        - dev
+  staging-every-5-days:
+    disabled: false
+    schedule: "0 3 */5 * *"
+    useOwnerReferencesInBackup: false
+    template:
+      ttl: 720h
+      includedNamespaces:
+        - staging
+  prod-every-2-hours:
+    disabled: false
+    schedule: "0 */2 * * *"
+    useOwnerReferencesInBackup: false
+    template:
+      ttl: 72h
+      includedNamespaces:
+        - prod
