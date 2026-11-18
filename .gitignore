@@ -1,0 +1,6 @@
+tools-server/.env
+tools-server/seaweedfs/
+*.tfvars
+*.tfstate
+*.tfstate.*
+.terraform/
