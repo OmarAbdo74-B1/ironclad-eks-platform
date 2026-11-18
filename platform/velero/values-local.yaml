@@ -44,24 +44,24 @@ metrics:
     enabled: true
     spec:
       - alert: VeleroBackupFailed
-      expr: increase(velero_backup_failure_total[1h]) > 0
-      labels:
-        severity: critical
-      annotations:
-        summary: Velero backup failed in the last hour
+        expr: increase(velero_backup_failure_total[1h]) > 0
+        labels:
+          severity: critical
+        annotations:
+          summary: Velero backup failed in the last hour
       - alert: VeleroBackupPartiallyFailed
-      expr: increase(velero_backup_partial_failure_total[1h]) > 0
-      labels:
-        severity: warning
-      annotations:
-        summary: Velero backup partially failed in the last hour
+        expr: increase(velero_backup_partial_failure_total[1h]) > 0
+        labels:
+          severity: warning
+        annotations:
+          summary: Velero backup partially failed in the last hour
       - alert: VeleroProdBackupStale
-      expr: time() - velero_backup_last_successful_timestamp{schedule="velero-prod-every-2-hours"} > 10800
-      for: 10m
-      labels:
-        severity: critical
-      annotations:
-        summary: No successful prod backup in the last 3 hours
+        expr: time() - velero_backup_last_successful_timestamp{schedule="velero-prod-every-2-hours"} > 10800
+        for: 10m
+        labels:
+          severity: critical
+        annotations:
+          summary: No successful prod backup in the last 3 hours
 
 schedules:
   dev-daily:
