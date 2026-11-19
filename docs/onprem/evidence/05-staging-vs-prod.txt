@@ -1,0 +1,24 @@
+4c4
+< namespace: staging
+---
+> namespace: prod
+11c11
+<       env: staging
+---
+>       env: prod
+15c15
+<     count: 2
+---
+>     count: 4
+17c17
+<     count: 2
+---
+>     count: 4
+32c32
+<         value: staging
+---
+>         value: prod
+39c39
+<         value: staging.192.168.56.103.nip.io
+---
+>         value: app.192.168.56.103.nip.io

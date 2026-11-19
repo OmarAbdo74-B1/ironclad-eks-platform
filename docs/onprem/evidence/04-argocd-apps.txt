@@ -1,0 +1,8 @@
+NAME           SYNC STATUS   HEALTH STATUS
+cars-dev       Synced        Healthy
+cars-prod      Synced        Healthy
+cars-staging   Synced        Healthy
+guardrails     Synced        Healthy
+monitoring     Synced        Healthy
+root           Synced        Healthy
+velero         Synced        Healthy

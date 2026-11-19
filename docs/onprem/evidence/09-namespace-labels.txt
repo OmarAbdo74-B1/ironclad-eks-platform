@@ -1,0 +1,4 @@
+NAME      STATUS   AGE     LABELS
+dev       Active   2d21h   app.kubernetes.io/part-of=ironclad,environment=dev,kubernetes.io/metadata.name=dev,pod-security.kubernetes.io/audit=restricted,pod-security.kubernetes.io/enforce=restricted,pod-security.kubernetes.io/warn=restricted
+staging   Active   2d21h   app.kubernetes.io/part-of=ironclad,environment=staging,kubernetes.io/metadata.name=staging,pod-security.kubernetes.io/audit=restricted,pod-security.kubernetes.io/enforce=restricted,pod-security.kubernetes.io/warn=restricted
+prod      Active   2d21h   app.kubernetes.io/part-of=ironclad,environment=prod,kubernetes.io/metadata.name=prod,pod-security.kubernetes.io/audit=restricted,pod-security.kubernetes.io/enforce=restricted,pod-security.kubernetes.io/warn=restricted

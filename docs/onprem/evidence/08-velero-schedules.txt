@@ -1,0 +1,4 @@
+NAME                          STATUS    CREATED                         SCHEDULE      BACKUP TTL   LAST BACKUP   SELECTOR   PAUSED
+velero-dev-daily              Enabled   2026-11-19 00:10:36 +0200 EET   0 2 * * *     168h0m0s     10h ago       <none>     false
+velero-prod-every-2-hours     Enabled   2026-11-19 00:10:36 +0200 EET   0 */2 * * *   72h0m0s      28m ago       <none>     false
+velero-staging-every-5-days   Enabled   2026-11-19 00:10:36 +0200 EET   0 3 */5 * *   720h0m0s     n/a           <none>     false

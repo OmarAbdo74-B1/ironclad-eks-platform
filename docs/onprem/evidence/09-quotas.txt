@@ -1,0 +1,30 @@
+Name:            env-quota
+Namespace:       dev
+Resource         Used   Hard
+--------         ----   ----
+limits.cpu       400m   2
+limits.memory    384Mi  2Gi
+pods             2      10
+requests.cpu     150m   1
+requests.memory  192Mi  1Gi
+services         2      5
+Name:            env-quota
+Namespace:       staging
+Resource         Used   Hard
+--------         ----   ----
+limits.cpu       800m   2
+limits.memory    768Mi  2Gi
+pods             4      10
+requests.cpu     300m   1
+requests.memory  384Mi  1Gi
+services         2      5
+Name:            env-quota
+Namespace:       prod
+Resource         Used    Hard
+--------         ----    ----
+limits.cpu       1600m   3
+limits.memory    1536Mi  3Gi
+pods             8       15
+requests.cpu     600m    1500m
+requests.memory  768Mi   1536Mi
+services         2       5

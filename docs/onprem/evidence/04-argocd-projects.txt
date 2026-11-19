@@ -1,0 +1,6 @@
+NAME               AGE
+default            88d
+dev-project        2d21h
+platform-project   6h32m
+prod-project       2d21h
+staging-project    2d21h

@@ -1,0 +1,1 @@
+[{"applications":["*"],"duration":"6h","kind":"allow","schedule":"0 10 * * 0-4","timeZone":"Africa/Cairo"}]

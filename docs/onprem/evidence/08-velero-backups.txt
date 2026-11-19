@@ -1,0 +1,10 @@
+NAME                                       STATUS      ERRORS   WARNINGS   CREATED                         EXPIRES   STORAGE LOCATION   QUEUE POSITION   SELECTOR
+before-calico                              Completed   0        0          2026-11-19 01:34:19 +0200 EET   29d       default                             <none>
+dev-evidence                               Completed   0        0          2026-11-19 03:29:42 +0200 EET   29d       default                             <none>
+dev-manual-2                               Completed   0        0          2026-11-19 00:30:49 +0200 EET   29d       default                             <none>
+prod-evidence                              Completed   0        0          2026-11-19 14:57:59 +0200 EET   29d       default                             <none>
+velero-dev-daily-20261119020051            Completed   0        0          2026-11-19 04:00:52 +0200 EET   6d        default                             <none>
+velero-prod-every-2-hours-20261119123002   Completed   0        3          2026-11-19 14:30:08 +0200 EET   2d        default                             <none>
+velero-prod-every-2-hours-20261119040052   Completed   0        0          2026-11-19 06:00:53 +0200 EET   2d        default                             <none>
+velero-prod-every-2-hours-20261119020052   Completed   0        0          2026-11-19 04:00:57 +0200 EET   2d        default                             <none>
+velero-prod-every-2-hours-20261119000051   Completed   0        0          2026-11-19 02:00:51 +0200 EET   2d        default                             <none>

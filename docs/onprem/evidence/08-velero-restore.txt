@@ -1,0 +1,49 @@
+Name:         [1mdev-restore-evidence[22m
+Namespace:    velero
+Labels:       <none>
+Annotations:  <none>
+
+Phase:                       [32mCompleted[0m
+Total items to be restored:  30
+Items restored:              30
+
+Started:    2026-11-19 03:30:59 +0200 EET
+Completed:  2026-11-19 03:32:29 +0200 EET
+
+Warnings:
+  Velero:     <none>
+  Cluster:    <none>
+  Namespaces:
+    dev-restore:  could not restore, ConfigMap:kube-root-ca.crt already exists. Warning: the in-cluster version is different than the backed-up version
+
+Backup:  dev-evidence
+
+Namespaces:
+  Included:  all namespaces found in the backup
+  Excluded:  <none>
+
+Resources:
+  Included:        *
+  Excluded:        ingresses, nodes, events, events.events.k8s.io, backups.velero.io, restores.velero.io, resticrepositories.velero.io, csinodes.storage.k8s.io, volumeattachments.storage.k8s.io, backuprepositories.velero.io
+  Cluster-scoped:  auto
+
+Namespace mappings:  dev=dev-restore
+
+Label selector:  <none>
+
+Or label selector:  <none>
+
+Restore PVs:  auto
+
+CSI Snapshot Restores: <none included>
+
+Existing Resource Policy:   <none>
+ItemOperationTimeout:       4h0m0s
+
+Preserve Service NodePorts:  auto
+
+Uploader config:
+
+
+HooksAttempted:   0
+HooksFailed:      0

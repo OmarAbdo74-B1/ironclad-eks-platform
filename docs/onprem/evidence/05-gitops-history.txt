@@ -1,0 +1,32 @@
+* 124b83b Add default-deny network policies with DNS, same-namespace, and traefik allows
+* 87f0937 Add ResourceQuota and LimitRange per environment
+* f1adbf7 Increase SeaweedFS volume count and reduce volume size
+* 6fed199 Add guardrails app with labeled namespaces
+* db78f51 Keep line breaks in Slack alert messages
+* d787dac Fix Velero values YAML and alert rule indentation
+* 455fb97 Add Velero alert rules and sync retry for platform apps
+* 7e75beb Add Velero with SeaweedFS backup storage and schedules
+* 4abcfb9 Add SeaweedFS as S3 storage for Velero backups
+* 03137ea Add tools server compose, env example, and gitignore for secrets
+* 5b11937 Disable operator TLS since admission webhooks are disabled
+* 94101ae Add kube-prometheus-stack with Slack alerting
+* 046d17c Add Traefik install script and values for the local cluster
+*   4cbd948 Merge pull request #2 from OmarAbdo74-B1/promote/prod-v1.1.3
+|\  
+| * eb4a62a promote(prod): backend v1.1.3, frontend v1.1.4
+|/  
+*   6bb8314 Merge pull request #1 from OmarAbdo74-B1/promote/staging-v1.1.3
+|\  
+| * 6ee2710 promote(staging): backend v1.1.3, frontend v1.1.4
+|/  
+* 284a5ef Expose backend-svc on port 80 with targetPort 3000
+* 660d5fe Use Traefik ingress class and nip.io hosts for the local cluster
+* c1b6df5 ci(frontend): deploy v1.1.4 to dev
+* 103ffde ci(frontend): deploy v1.1.3 to dev
+* fb34975 ci(frontend): deploy v1.1.2 to dev
+* 472b3fa ci(backend): deploy v1.1.3 to dev
+* 21cd19b ci(backend): deploy v1.1.2 to dev
+* f60c119 Health probes, backend service on port 80, APP_ENV per overlay
+* 920f1c3 Pin images to v1.0.5
+* 9b3967c Fix root app path
+* abdcae3 Initial ArgoCD and Kustomize setup

@@ -1,0 +1,9 @@
+NAME                       READY   STATUS    RESTARTS   AGE   IP            NODE           NOMINATED NODE   READINESS GATES
+backend-5fd44684d9-7bvhp   1/1     Running   0          10m   10.244.2.12   manged-node1   <none>           <none>
+backend-5fd44684d9-d8r5s   1/1     Running   0          10m   10.244.2.13   manged-node1   <none>           <none>
+backend-5fd44684d9-vzgpm   1/1     Running   0          10m   10.244.1.26   manged-node2   <none>           <none>
+backend-5fd44684d9-xjrpv   1/1     Running   0          10m   10.244.1.24   manged-node2   <none>           <none>
+frontend-57d455b5f-fv4xd   1/1     Running   0          10m   10.244.1.25   manged-node2   <none>           <none>
+frontend-57d455b5f-mwqdl   1/1     Running   0          10m   10.244.2.11   manged-node1   <none>           <none>
+frontend-57d455b5f-qbgf8   1/1     Running   0          10m   10.244.1.27   manged-node2   <none>           <none>
+frontend-57d455b5f-tmcsx   1/1     Running   0          10m   10.244.2.14   manged-node1   <none>           <none>
